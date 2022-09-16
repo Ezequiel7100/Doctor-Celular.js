@@ -3,19 +3,12 @@
     margin: 0;
     list-style: none;
     }
+
+.nombreDoc{
+    font-size: 40px;
+}
 body{
     background-color: black;
-}
-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 260px;
-    font-size: 80px;
-    color: aqua;
-    border-radius: 2rem;
-    border: solid 2px transparent;
-    box-shadow: 5px 8px 12px aqua;
 }
 .paginaCelulares{
     width: 100%;

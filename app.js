@@ -38,23 +38,9 @@ function siNoUsuario() {
         
     }
 }
+
 let producto;
 
-function compararProdIngresado() {
-    switch (producto) {
-        case "A12":
-            precio = 45000
-        break;
-        case "A22":
-            precio = 68000
-        break;
-        case "G60s":
-            precio = 60000
-        break;
-        default:
-            break;
-    }
-}
 function mostrarOferta() {
     const ofertas = productos.filter((el) => el.precio < 50000);
     for(const oferta of ofertas){
@@ -63,18 +49,22 @@ function mostrarOferta() {
 } 
 
 while (seleccion != "no") {
-    producto = prompt("Ingrese el nombre del celular que desea comprar para añadir al carrito, A12 , A22, G60s o ingrese 1 para ver la oferta de hoy")
-    precio = 0
-    if (producto == "A12" || producto == "A22" || producto == "G60s" ) {
-        compararProdIngresado(producto)
-
+    producto = prompt(`Ingrese el nombre del celular que desea comprar para añadir al carrito:
+     ${productos.map((productos, index) => {
+        return `\nn° ${index + 1}: ${productos.nombre} con un precio de $${productos.precio}`
+     })}
+     \no ingrese of para ver la oferta de hoy`)
+    
+    if (producto == "A12" || producto == "A22" ||producto == "G60s"  ) {
+        
+        let precio = prompt("ingrese el precio")
         let unidades = parseInt(prompt("¿Cuantas unidades quiere comprar?"))
 
         carrito.push({producto, unidades , precio})
         console.log(carrito)
 
     }
-    else if (producto === "1") {
+    else if (producto === "of") {
         mostrarOferta(producto)
     }
     else{
