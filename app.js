@@ -1,3 +1,5 @@
+
+
 let usuario = prompt("ingrese su usuario");
 
 alert("Hola!! " + usuario + " Bienvenido/a a Doctor Celular")
@@ -92,3 +94,33 @@ const total = carrito.reduce((acc , el) => acc + el.precio * el.unidades, 0)
     alert(`El total a pagar por su compra: ${total}`)
     
     alert("Muchas Gracias por visitarnos!")
+
+let eventoBoton1 = document.getElementById("boton1");
+let eventoBoton2 = document.getElementById("boton2");
+let eventoBoton3 = document.getElementById("boton3");
+
+eventoBoton1.addEventListener("click", evento )
+eventoBoton2.addEventListener("click", evento )
+eventoBoton3.addEventListener("click", evento )
+
+function evento(){
+alert("Producto Agregado correctamente al carrito")
+}
+
+function mensajeEnviar(){
+alert("Email ingresado correctamente")
+}
+
+const formulario = document.getElementById("from")
+
+const mail = document.getElementById("email")
+
+formulario.addEventListener("submit", validarFomulario) 
+
+function validarFomulario() {
+    console.log(mail.value);
+}
+
+let btnEnviar = document.getElementById("enviar")
+ 
+btnEnviar.addEventListener("click", mensajeEnviar )

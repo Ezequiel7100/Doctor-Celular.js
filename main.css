@@ -3,7 +3,9 @@
     margin: 0;
     list-style: none;
     }
-
+h4{
+    color: white;
+}
 .nombreDoc{
     font-size: 40px;
 }
