@@ -27,12 +27,9 @@ function guardarItemCarrito(e){
 
 function guardarEnCarrito(nuevoItem) {
 
-    const alert = document.querySelector('.alert')
 
-    setTimeout( function(){
-      alert.classList.add('alerta')
-    }, 1500)
-      alert.classList.remove('alerta')
+añadirAlCarrito ()
+
 
 for (let i = 0; i < carrito.length; i++) {
 
@@ -100,6 +97,8 @@ function CarritoTotal() {
 
 
 function removeItemCarrito(e){
+    eliminarProducto ()
+
     const botonDelete = e.target
     const tr = botonDelete.closest(".itemCarrito")
     const title = tr.querySelector('.title').textContent;
@@ -109,14 +108,6 @@ function removeItemCarrito(e){
             carrito.splice(i, 1)
         }
     }
-
-    const alert = document.querySelector('.eliminar')
-
-    setTimeout( function(){
-      alert.classList.add('eliminar')
-    }, 1500)
-      alert.classList.remove('eliminar')
-
     tr.remove()
     CarritoTotal()
 }
@@ -148,3 +139,62 @@ window.onload = function (){
         renderCarrito()
     }
 }
+
+const comprar = document.querySelector(".comprar")
+
+comprar.addEventListener("click", ()=>{
+    pedirEmail()
+})
+
+
+
+//Alerts
+function añadirAlCarrito (){
+    Swal.fire({
+        icon: 'success',
+        title: 'Producto añadido correctamente al carrito!',
+        showConfirmButton: false,
+        timer: 1500,
+        customClass:{
+            popup: 'colorAlert'
+        }
+      })
+}
+
+function eliminarProducto (){
+    Swal.fire({
+        icon: 'success',
+        title: 'Producto eliminado correctamente al carrito!',
+        showConfirmButton: false,
+        timer: 1500,
+      })
+}
+
+function pedirEmail(){
+    
+    (async() =>{ 
+    const { value: email } = await Swal.fire({
+        title: 'Ingrese Email para enviar codigo de retiro',
+        input: 'email',
+        inputPlaceholder: 'Ingrese su enmail'
+      })
+      if (email) {
+        retiroProducto()
+      }
+    }) ()
+   
+}
+
+function retiroProducto(){
+    
+    let numeroAlea = parseInt(Math.random()*1000);
+      
+    Swal.fire({
+        icon: 'success',
+        title: 'Su Pedido ya esta listo para retirar!!',
+        text: `Su numero de pedido es ${numeroAlea}, estamos de lunes a lunes de 9:30hrs a 22:00hrs`,
+        showConfirmButton: true,
+        timer: 15000
+      })
+}
+

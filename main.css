@@ -6,6 +6,9 @@
 header, .alert{
     z-index: 100;
 }
+.colorAlert{
+    border-radius: 0;
+}
 h4{
     color: white;
 }
