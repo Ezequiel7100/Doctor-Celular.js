@@ -6,28 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="./main.css">
     <title>Doctor Celular</title>
 </head>
 <body>
-    <header class="container-fluid bg-dark position-sticky top-0">
-        <ul class="nav nav-pills mb-3 py-3 container" id="pills-tab" role="tablist">
+    <header class=" position-sticky top-0 bg-dark header">
+        <ul class="nav nav-pills mb-3 py-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
               <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Inicio</a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Carrito</a>
+              <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                Carrito
+                <ion-icon name="cart"></ion-icon>
+            </a>
             </li>
           </ul>
+          <button class = "modoNoc" id="modoNoc">
+            <span><ion-icon name="sunny-outline"></ion-icon></span>
+            <span><ion-icon name="moon-outline"></ion-icon></span>
+        </button>
     </header>
 <main>
-    <div class="alert container position-sticky top-0  alert-success alerta" role="alert">
-        Producto añadido correctamente al carrito! 
-      </div>
-      <div class="alert container position-sticky top-0  alert-danger eliminar" role="alert">
-        Producto eliminado del carrito! 
-      </div>
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
             <div class="fondo">   
@@ -35,7 +35,7 @@
             </div> 
             <section class="paginaCelulares">
                 <div class="fotosCelulares">
-                    <a href="#" class="imagenCelu1 card">
+                    <div class="imagenCelu1 card">
                         <img src="./productos/motog60s.png" class="img" alt="Celular Motorola G60s">
                         <div class="card-body">
                             <h5 class="card-title text-black">Motorola G60s </h5>
@@ -43,14 +43,15 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item precio">$60000</li>
                                 <li class="list-group-item">
+                                <ion-icon name="airplane"></ion-icon>
                                     Envio a todo el pais
                                 </li>
                                 </ul>
                         <div class="card-body">
                             <button class="btn btn-outline-primary d-flex boton">Añadir al carrito</button>
                         </div>
-                    </a>
-                    <a href="#" class="imagenCelu2 card">
+                    </div>
+                    <div class="imagenCelu2 card">
                         <img src="./productos/celular-a12.jpg" class="img" alt="Celular Samsung A12">
                         <div class="card-body">
                             <h5 class="card-title text-black">Samsung A12</h5>
@@ -58,14 +59,15 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item precio">$45000</li>
                                 <li class="list-group-item">
+                                <ion-icon name="airplane"></ion-icon>
                                     Envio a todo el pais
                                 </li>
                             </ul>
                         <div class="card-body">
                             <button  class="btn btn-outline-primary d-flex boton">Añadir al carrito</button>
                         </div>
-                    </a>
-                    <a href="#" class="imagenCelu3 card">
+                    </div>
+                    <div class="imagenCelu3 card">
                         <img src="./productos/celular-a22.png" class="img" alt="Celular Samsung A22" >
                         <div class="card-body">
                             <h5 class="card-title text-black">Samsung A22 </h5>
@@ -73,14 +75,15 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item precio">$68000</li>
                                 <li class="list-group-item">
+                                <ion-icon name="airplane"></ion-icon>
                                 Envio a todo el pais
                                 </li>
                             </ul>
                         <div class="card-body">
                             <button  class="btn btn-outline-primary d-flex boton">Añadir al carrito</button>
                         </div>
-                    </a>
-                    <a href="#" class="imagenCelu4 card">
+                    </div>
+                    <div class="imagenCelu4 card">
                         <img src="./productos/cargador-portatil.png" class="img" alt="Cargador portatil" >
                         <div class="card-body">
                             <h5 class="card-title text-black">Cargador Portatil Soul </h5>
@@ -88,14 +91,15 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item precio">$1600</li>
                                 <li class="list-group-item">
+                                <ion-icon name="airplane"></ion-icon>
                                 Envio a todo el pais
                                 </li>
                             </ul>
                         <div class="card-body">
                             <button  class="btn btn-outline-primary d-flex boton">Añadir al carrito</button>
                         </div>
-                    </a>
-                    <a href="#" class="imagenCelu5 card">
+                    </div>
+                    <div class="imagenCelu5 card">
                         <img src="./productos/cableV8.png" class="img" alt="cable v8" style="width: 190px;">
                         <div class="card-body">
                             <h5 class="card-title text-black">Cable V8</h5>
@@ -103,14 +107,15 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item precio">$600</li>
                                 <li class="list-group-item">
+                                <ion-icon name="airplane"></ion-icon>    
                                 Envio a todo el pais
                                 </li>
                             </ul>
                         <div class="card-body">
                             <button  class="btn btn-outline-primary d-flex boton">Añadir al carrito</button>
                         </div>
-                    </a>
-                    <a href="#" class="imagenCelu6 card">
+                    </div>
+                    <div class="imagenCelu6 card">
                         <img src="./productos/cableIphone.jpg" class="img" alt="Cable iphone" >
                         <div class="card-body">
                             <h5 class="card-title text-black">Cable Lightning Iphone</h5>
@@ -118,13 +123,20 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item precio">$1000</li>
                                 <li class="list-group-item">
+                                <ion-icon name="airplane"></ion-icon>
                                 Envio a todo el pais
                                 </li>
                             </ul>
                         <div class="card-body">
                             <button  class="btn btn-outline-primary d-flex boton">Añadir al carrito</button>
                         </div>
-                    </a>
+                    </div>
+                        <div>
+                            
+                        </div>
+
+
+
                 </div>
             </section>
             </div>
@@ -134,8 +146,8 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Producto</th>
-                    <th scope="col">Cantidad</th>
                     <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
                   </tr>
                 </thead>
                 <tbody class="tbody">
@@ -156,7 +168,8 @@
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.34/dist/sweetalert2.all.min.js"></script>
-
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="./app.js"></script>
 </body>
 </html>

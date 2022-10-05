@@ -1,3 +1,13 @@
+const url = 'https://pokeapi.co/api/v2/pokemon/1/';
+
+fetch (url)
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+})
+.catch(err =>console.log(err))
+
+
 const clickboton = document.querySelectorAll('.boton')
 const tbody = document.querySelector('.tbody')
 let carrito = []
@@ -69,7 +79,9 @@ function renderCarrito() {
                     </td>
                     <td class="tabla__cantidad">
                         <input type="number" min="1" value=${item.cantidad} class="input__elemento">
-                        <button class="delete btn btn-danger">x</button>
+                        <button class="delete btn btn-danger">
+                        <ion-icon name="trash-outline"></ion-icon>
+                        </button>
                     </td>
         
         `
