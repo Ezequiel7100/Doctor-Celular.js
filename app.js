@@ -1,11 +1,33 @@
-const url = 'https://pokeapi.co/api/v2/pokemon/1/';
 
-fetch (url)
-.then(response => response.json())
-.then(data => {
-    console.log(data)
-})
-.catch(err =>console.log(err))
+function mostrar() {
+    
+
+    fetch('./datos.json')
+        .then(res => res.json())
+        .then(datos => {
+            tabla(datos)
+
+        })
+
+}
+
+mostrar ()
+function tabla(datos) {
+    contenidoArreglo.innerHTML = ''
+    for(let valor of datos){
+        contenidoArreglo.innerHTML += `
+        <tr>
+            <th scope="row">${valor.id}</th>
+            <td>${valor.titulo}</td>
+            <td>${valor.precio}</td>
+            <td>${valor.duracion}</td>
+        </tr>
+        
+        `
+    }
+}
+
+
 
 
 const clickboton = document.querySelectorAll('.boton')

@@ -1,0 +1,43 @@
+[
+    {
+        "id" : 1,
+        "titulo" : "Diagnostico",
+        "precio" : 500,
+        "duracion" : "Hasta encontar el problema"
+    },
+    {
+        "id" : 2,
+        "titulo" : "Baño Quimico",
+        "precio" : 3000,
+        "duracion" : "48hrs"
+
+    },
+    {
+        "id" : 3,
+        "titulo" : "Liberacion",
+        "precio" : 2500,
+        "duracion" : "48hrs"
+    },
+    {
+        "id" : 4,
+        "titulo" : "Cuenta de Google",
+        "precio" : 2000,
+        "duracion" : "24hrs"
+    },
+    {
+        "id" : 5,
+        "titulo" : "Placa de carga",
+        "precio" : 4000,
+        "duracion" : "48hrs"
+        
+    },
+    {
+        "id" : 6,
+        "titulo" : "Pin de Carga",
+        "precio" : 2000,
+        "duracion" : "48hrs"
+    }
+
+
+
+]
